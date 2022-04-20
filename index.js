@@ -5,8 +5,7 @@ const generateMarkdown = require('./utils/generateMarkdown');
 
 
 // TODO: Create an array of questions for user input
-const questions = [];
-inquirer.prompt([
+const questions = [
   {
     type: 'input;',
     message: 'What is the title of your project?',
@@ -37,11 +36,13 @@ inquirer.prompt([
     type: 'input',
     message: 'What command should be run to install dependencies?',
     name: 'dependencies',
+    default: 'npm i',
   },
   {
     type: 'input',
     message: 'What command should be run to run tests?',
     name: 'test',
+    default: 'npm test',
   },
   {
     type: 'input',
@@ -53,18 +54,13 @@ inquirer.prompt([
     message: 'What does the user need to know about contributing to the repo?',
     name: 'contributing',
   },
-])
-.then((response) => {
-  console.log(response);
-
-}
-);
+];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {} 
 
 // Function call to initialize app
 init();
