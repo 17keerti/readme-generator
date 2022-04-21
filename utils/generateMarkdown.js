@@ -53,7 +53,7 @@ function generateMarkdown(data) {
   ## Tests
   ${data.tests}
   ## Questions
-  If you have any questions about repo, open an issue or contact me directly at (https://github.com/${data.username}) or you can email me at: ${data.email} `;
+  If you have any questions about repo, open an issue or contact me directly at (https://github.com/${data.github}) or you can email me at: ${data.email} `;
     }
 
 module.exports = generateMarkdown;
