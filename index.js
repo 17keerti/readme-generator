@@ -30,18 +30,18 @@ const questions = [
     type: 'list',
     message: 'What kind of license should your project have?',
     name: 'license',
-    choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None'],
+    choices: ['MIT', 'APACHE', 'GPL3.0', 'BSD3', 'None'],
   },
   {
     type: 'input',
     message: 'What command should be run to install dependencies?',
-    name: 'dependencies',
+    name: 'install',
     default: 'npm i',
   },
   {
     type: 'input',
     message: 'What command should be run to run tests?',
-    name: 'test',
+    name: 'tests',
     default: 'npm test',
   },
   {
@@ -58,9 +58,8 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-  fs.writeFile('generatedReadme.md', data, (err) => 
+  fs.writeFile(fileName, markdown, (err) => 
   err ? console.error(err) : console.log('Success!')
-
   )};
 
 // TODO: Create a function to initialize app
